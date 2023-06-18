@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FinancialActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingStart="10dp"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/car"/>
+
+        <Button
+            android:id="@+id/toAutoLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:text="Auto Loan Calulaotr"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/growth"/>
+
+        <Button
+            android:id="@+id/toCompoundInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Compound Interest Calculator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/growth"/>
+
+        <Button
+            android:id="@+id/toInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Interest Calculator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/home__3_"/>
+
+        <Button
+            android:id="@+id/toMortgage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Mortgage Calulator"
+            android:drawableTint="@color/yellow"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/money"/>
+
+        <Button
+            android:id="@+id/toRent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Rent Calculator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/money"/>
+
+        <Button
+            android:id="@+id/toSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Salary Calculator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+

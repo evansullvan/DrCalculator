@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MathsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/thermometer"/>
+
+            <Button
+                android:id="@+id/toTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_btn_background"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:text="Temperature"
+                android:drawableTint="@color/yellow"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ruler"/>
+        <Button
+            android:id="@+id/toDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Distance"
+            android:drawableTint="@color/yellow"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/shade"/>
+        <Button
+            android:id="@+id/toMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Matrix Calculator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/shuffle"/>
+        <Button
+            android:id="@+id/toRNG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Random Number Generator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/binary"/>
+        <Button
+            android:id="@+id/toBinary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_background"
+            android:text="Binary Calculator"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:textSize="20sp"
+            android:drawableTint="@color/yellow"
+            android:textAlignment="textStart"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
