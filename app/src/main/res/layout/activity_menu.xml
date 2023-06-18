@@ -9,6 +9,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,12 +20,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
-        android:paddingStart="10dp"
+        android:paddingStart="20dp"
         android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="28dp"
+            android:background="?android:attr/listDivider" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
             <ImageView
@@ -40,6 +50,7 @@
                 android:background="@drawable/menu_btn_background"
                 android:drawableEnd="@drawable/ic_arrow"
                 android:text="Maths"
+
                 android:drawableTint="@color/yellow"
                 android:textSize="20sp"
                 android:textAlignment="textStart"
