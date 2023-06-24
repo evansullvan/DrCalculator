@@ -35,7 +35,7 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
 
                     android:padding="40dp">
@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Car Loan"
+                        android:text="Distance Convertor"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
@@ -51,7 +51,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Car loan"
+                        android:text="@string/distInfo"
+                        android:layout_marginTop="10dp"
                         android:textAlignment="center"
                         android:textSize="16sp"/>
 
@@ -60,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:elevation="3dp"
+                    android:elevation="20dp"
                     android:background="@drawable/top_round_corners"
                     android:orientation="vertical"
                     android:padding="20dp">
@@ -99,7 +100,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/input_background"
-                        android:hint="$500"
+                        android:hint="500"
                         android:layout_marginHorizontal="15dp"
                         android:paddingHorizontal="20dp"
                         android:inputType="number"/>

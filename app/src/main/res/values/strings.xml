@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">DrCalculator</string>
+    <string name="tempInfo">This calculator will show the steps to solve the conversion equation for temperature</string>
+    <string name="distInfo">Convert among distance units. Convert to kilometers, meters, centimeters, inches, and feet</string>
+    <string name="rngInfo">A random number generator is a device that can generate one or many random numbers within a defined scope</string>
+<string name="binInfo">Decimal to binary converter helps you to calculate binary value from a decimal number value up to 19 characters length, and dec to bin conversion table</string>
+
+
+
+
+
+
 </resources>
