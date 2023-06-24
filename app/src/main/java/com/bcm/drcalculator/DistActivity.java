@@ -8,19 +8,32 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class DistActivity extends AppCompatActivity {
 
+    private EditText inputEditText;
+    private Spinner fromSpinner;
+    private Spinner toSpinner;
+    private Button calculateButton;
+    private TextView resultTextView;
     private Toolbar toolbar;
+
+    private String[] distanceUnits = {"Meters", "Kilometers", "Miles", "Centimeters", "Inches", "Feet"};
+    private double[] conversionFactors = {1.0, 0.001, 0.000621371, 100.0, 39.3701, 3.28084};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dist);
-
         toolbar = findViewById(R.id.toolbar);
 
-        toolbar.setTitle("Distance Conversion");
+
+        toolbar.setTitle("Temperature");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -31,6 +44,7 @@ public class DistActivity extends AppCompatActivity {
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
         }
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,5 +52,40 @@ public class DistActivity extends AppCompatActivity {
 
             }
         });
+
+
+        inputEditText = findViewById(R.id.inputEditText);
+        fromSpinner = findViewById(R.id.fromSpinner);
+        toSpinner = findViewById(R.id.toSpinner);
+        calculateButton = findViewById(R.id.calculateButton);
+        resultTextView = findViewById(R.id.resultTextView);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, distanceUnits);
+        fromSpinner.setAdapter(adapter);
+        toSpinner.setAdapter(adapter);
+
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                convertDistance();
+            }
+        });
+    }
+
+    private void convertDistance() {
+        String inputText = inputEditText.getText().toString().trim();
+        if (inputText.isEmpty()) {
+            resultTextView.setText("Please enter a value");
+            return;
+        }
+
+        double inputValue = Double.parseDouble(inputText);
+        int fromIndex = fromSpinner.getSelectedItemPosition();
+        int toIndex = toSpinner.getSelectedItemPosition();
+
+        double result = inputValue * conversionFactors[fromIndex] / conversionFactors[toIndex];
+        String resultText = String.format("%.2f", result);
+
+        resultTextView.setText(resultText);
     }
 }

@@ -8,15 +8,32 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Random;
 
 public class randomNumberActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private EditText minNumEditText;
+    private EditText maxNumEditText;
+    private Button generateButton;
+    private TextView randomOutputTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_number);
         toolbar = findViewById(R.id.toolbar);
+        minNumEditText = findViewById(R.id.minNum);
+        maxNumEditText = findViewById(R.id.maxNum);
+        generateButton = findViewById(R.id.generateButton);
+        randomOutputTextView = findViewById(R.id.randomOutput);
+
+
 
         toolbar.setTitle("Temperature");
         setSupportActionBar(toolbar);
@@ -37,5 +54,36 @@ public class randomNumberActivity extends AppCompatActivity {
 
             }
         });
+
+        generateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                generateRandomNumber();
+            }
+        });
+    }
+
+    private void generateRandomNumber() {
+        String minNumText = minNumEditText.getText().toString().trim();
+        String maxNumText = maxNumEditText.getText().toString().trim();
+
+        if (minNumText.isEmpty() || maxNumText.isEmpty()) {
+            Toast.makeText(this, "Please enter minimum and maximum numbers", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int minNum = Integer.parseInt(minNumText);
+        int maxNum = Integer.parseInt(maxNumText);
+
+        if (minNum >= maxNum) {
+            Toast.makeText(this, "Maximum number cannot be smaller than the minimum number", Toast.LENGTH_SHORT).show();
+
+            return;
+        }
+
+        Random random = new Random();
+        int randomNumber = random.nextInt(maxNum - minNum + 1) + minNum;
+
+        randomOutputTextView.setText(String.valueOf(randomNumber));
     }
 }
