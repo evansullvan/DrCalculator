@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TempActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -91,7 +92,8 @@ public class TempActivity extends AppCompatActivity {
         try {
             inputValue = Double.parseDouble(inputEditText.getText().toString());
         } catch (NumberFormatException e) {
-            outputTextView.setText("Invalid input");
+//            outputTextView.setText("Invalid input");
+            Toast.makeText(this, "Temperture cannot be empty", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -152,5 +154,11 @@ public class TempActivity extends AppCompatActivity {
             default:
                 return 0;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
 }

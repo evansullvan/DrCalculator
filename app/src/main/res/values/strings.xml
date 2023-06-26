@@ -4,6 +4,14 @@
     <string name="distInfo">Convert among distance units. Convert to kilometers, meters, centimeters, inches, and feet</string>
     <string name="rngInfo">A random number generator is a device that can generate one or many random numbers within a defined scope</string>
 <string name="binInfo">Decimal to binary converter helps you to calculate binary value from a decimal number value up to 19 characters length, and dec to bin conversion table</string>
+    <string name="loan_amount">$</string>
+    <string name="loan_term">Years</string>
+    <string name="loan_result">$</string>
+    <string name="compoundInfo">Use our compound interest calculator to see how your savings or investments might grow over time using the power of compound interest</string>
+    <string name="interestInfo">This calculator computes the simple interest and end balance of a savings or investment account.</string>
+    <string name="mortgageInfo">Use our mortgage calculator to calculate how much you can borrow or try our mortgage repayment calculator to estimate your monthly repayments</string>
+    <string name="rentInfo">Use our calculator to estimate how much money you have left towards rent after all your monthly expenses have been accounted for</string>
+    <string name="carloanInfo">Find out how much you could borrow with our car finance calculator</string>
 
 
 

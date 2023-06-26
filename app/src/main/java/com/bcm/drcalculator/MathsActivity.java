@@ -44,53 +44,67 @@ public class MathsActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
         }
 
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MathsActivity.this, menuActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
-
+                Intent intent = new Intent(MathsActivity.this, menuActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
+                finish();
             }
         });
 
         toTemp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MathsActivity.this, TempActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
-
+                Intent intent = new Intent(MathsActivity.this, TempActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         toDist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MathsActivity.this, DistActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
-
+                Intent intent = new Intent(MathsActivity.this, DistActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         toMatrix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MathsActivity.this, MatrixActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
-
+                Intent intent = new Intent(MathsActivity.this, MatrixActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         toRNG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MathsActivity.this, randomNumberActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
-
+                Intent intent = new Intent(MathsActivity.this, randomNumberActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         toBin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MathsActivity.this, BinaryActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
-
+                Intent intent = new Intent(MathsActivity.this, BinaryActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
 }

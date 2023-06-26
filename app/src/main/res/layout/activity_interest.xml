@@ -35,7 +35,7 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
 
                     android:padding="40dp">
@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Car Loan"
+                        android:text="Simple Interest calculator"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
@@ -51,7 +51,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Car loan"
+                        android:text="@string/interestInfo"
+                        android:layout_marginTop="10dp"
                         android:textAlignment="center"
                         android:textSize="16sp"/>
 
@@ -66,6 +67,7 @@
                     android:padding="20dp">
 
                     <TextView
+                        android:id="@+id/resultTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="£423,518"
@@ -75,26 +77,27 @@
                         android:layout_gravity="center_horizontal"/>
 
                     <TextView
+                        android:id="@+id/afteryears"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="After 30 years"
-                        android:textSize="20sp"
+                        android:layout_gravity="center_horizontal"
+                        android:text=""
 
                         android:textAlignment="center"
-                        android:layout_gravity="center_horizontal"/>
+                        android:textSize="20sp" />
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Monthly Contribution"
+                        android:text="Initial Investment"
                         android:paddingBottom="5dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="5dp"/>
 
                     <EditText
-                        android:id="@+id/monthlyContirbution"
+                        android:id="@+id/initialInvestment"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/input_background"
@@ -103,13 +106,27 @@
                         android:paddingHorizontal="20dp"
                         android:inputType="number"/>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Length of time (Years)"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Length of time (Years)"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"/>
+                        <TextView
+                            android:id="@+id/loanTermTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"/>
+                    </LinearLayout>
+
 
                     <SeekBar
                         android:id="@+id/loanTerm"
@@ -176,141 +193,3 @@
 
 
 
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--    xmlns:tools="http://schemas.android.com/tools"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="match_parent"-->
-    <!--    android:background="@color/white"-->
-    <!--    tools:context=".TempActivity">-->
-
-    <!--    <androidx.appcompat.widget.Toolbar-->
-    <!--        android:id="@+id/toolbar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        android:paddingHorizontal="50dp"-->
-    <!--        android:paddingTop="30dp"-->
-    <!--        android:orientation="vertical"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar">-->
-
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:id="@+id/infoBox"-->
-    <!--            android:orientation="vertical"-->
-    <!--            android:background="@drawable/infobox_background"-->
-    <!--            android:paddingHorizontal="10dp"-->
-    <!--            android:paddingVertical="20dp"-->
-    <!--            android:layout_marginBottom="20dp"-->
-    <!--            >-->
-
-    <!--            <TextView-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="Temprature Conversions"-->
-    <!--                android:textStyle="bold"-->
-    <!--                android:textSize="20sp"/>-->
-    <!--            <TextView-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="Select what needs to be converted"-->
-    <!--                android:textSize="15sp"/>-->
-    <!--        </LinearLayout>-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/valueTag"-->
-    <!--            android:textStyle="bold"-->
-    <!--            android:layout_marginBottom="10dp"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:gravity="center_horizontal"-->
-    <!--            android:text="Value to Convert:" />-->
-
-    <!--        <EditText-->
-    <!--            android:id="@+id/input"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="60dp"-->
-    <!--            android:ems="10"-->
-    <!--            android:layout_marginBottom="30dp"-->
-    <!--            android:paddingStart="15dp"-->
-    <!--            android:background="@drawable/input_background"-->
-
-    <!--            android:maxLines="1"-->
-    <!--            android:inputType="numberDecimal" />-->
-
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginBottom="10dp"-->
-    <!--            android:orientation="horizontal">-->
-
-    <!--            <TextView-->
-    <!--                android:id="@+id/textView2"-->
-    <!--                android:layout_width="5dp"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_weight="3"-->
-
-    <!--                android:text="From:" />-->
-
-    <!--            <Spinner-->
-    <!--                android:id="@+id/spinner"-->
-    <!--                android:layout_width="0dp"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_weight="10" />-->
-    <!--        </LinearLayout>-->
-
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginBottom="10dp"-->
-    <!--            android:orientation="horizontal">-->
-
-    <!--            <TextView-->
-    <!--                android:id="@+id/textView3"-->
-    <!--                android:layout_width="5dp"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_weight="3"-->
-    <!--                android:text="To:" />-->
-
-    <!--            <Spinner-->
-    <!--                android:id="@+id/spinner2"-->
-    <!--                android:layout_width="0dp"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_weight="10" />-->
-    <!--        </LinearLayout>-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/tempOutput"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="60dp"-->
-    <!--            android:text=""-->
-    <!--            android:layout_marginBottom="30dp"-->
-    <!--            android:layout_marginTop="20dp"-->
-    <!--            android:gravity="center_vertical"-->
-    <!--            android:textAlignment="center"-->
-    <!--            android:background="@drawable/input_background"/>-->
-
-    <!--        <com.google.android.material.button.MaterialButton-->
-    <!--            android:id="@+id/calulateTemp"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-
-    <!--            app:strokeWidth="2dp"-->
-    <!--            app:strokeColor="@color/yellow"-->
-    <!--            android:textColor="@color/yellow"-->
-    <!--            android:text="Calculate" />-->
-    <!--    </LinearLayout>-->
-
-
-    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -35,7 +35,7 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
 
                     android:padding="40dp">
@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Car Loan"
+                        android:text="Compound Interest Calculator"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
@@ -51,7 +51,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Car loan"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/compoundInfo"
                         android:textAlignment="center"
                         android:textSize="16sp"/>
 
@@ -66,6 +67,7 @@
                     android:padding="20dp">
 
                     <TextView
+                        android:id="@+id/resultTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="£423,518"
@@ -79,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:text="After 30 years"
                         android:textSize="20sp"
-
+android:id="@+id/afteryears"
                         android:textAlignment="center"
                         android:layout_gravity="center_horizontal"/>
 
@@ -121,23 +123,37 @@
                         android:paddingHorizontal="20dp"
                         android:inputType="number"/>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Length of time (Years)"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Length of time (Years)"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"/>
+                        <TextView
+                            android:id="@+id/loanTermTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"/>
+                    </LinearLayout>
+
 
                     <SeekBar
                         android:id="@+id/loanTerm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:max="200"
+                        android:max="120"
                         android:progressDrawable="@drawable/seekbar_bg"
                         android:thumb="@drawable/seekbar_thumb"
-                        android:progress="30"
+
 
                         android:progressTint="@color/yellow"
                         />
