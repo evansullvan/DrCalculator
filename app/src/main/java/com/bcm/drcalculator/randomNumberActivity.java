@@ -86,4 +86,10 @@ public class randomNumberActivity extends AppCompatActivity {
 
         randomOutputTextView.setText(String.valueOf(randomNumber));
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
+    }
 }

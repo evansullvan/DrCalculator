@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DistActivity extends AppCompatActivity {
 
@@ -75,7 +76,8 @@ public class DistActivity extends AppCompatActivity {
     private void convertDistance() {
         String inputText = inputEditText.getText().toString().trim();
         if (inputText.isEmpty()) {
-            resultTextView.setText("Please enter a value");
+           // resultTextView.setText("Please enter a value");
+            Toast.makeText(this, "Please enter a value", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -87,5 +89,11 @@ public class DistActivity extends AppCompatActivity {
         String resultText = String.format("%.2f", result);
 
         resultTextView.setText(resultText);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
 }
